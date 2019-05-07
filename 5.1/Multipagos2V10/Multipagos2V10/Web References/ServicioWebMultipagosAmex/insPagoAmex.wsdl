@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://adquira.com.mx/amex/definitions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://adquira.com.mx/amex/schemas" targetNamespace="http://adquira.com.mx/amex/definitions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:amex="http://adquira.com.mx/amex/schemas" elementFormDefault="qualified" targetNamespace="http://adquira.com.mx/amex/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="insPagoAmexRequest" type="amex:InsPagoAmexRequestType" />
+      <xs:complexType name="InsPagoAmexRequestType">
+        <xs:sequence>
+          <xs:element name="s_transm" type="xs:string" />
+          <xs:element name="c_referencia" type="xs:string" />
+          <xs:element name="val_1" type="xs:int" />
+          <xs:element name="t_servicio" type="xs:string" />
+          <xs:element name="c_cur" type="xs:int" />
+          <xs:element name="t_importe" type="xs:string" />
+          <xs:element name="titular" type="xs:string" />
+          <xs:element name="val_3" type="xs:string" />
+          <xs:element name="val_4" type="xs:string" />
+          <xs:element name="val_5" nillable="true" type="xs:string" />
+          <xs:element name="val_6" type="xs:string" />
+          <xs:element name="val_11" nillable="true" type="xs:string" />
+          <xs:element name="val_12" nillable="true" type="xs:string" />
+          <xs:element name="clave_entidad" type="xs:int" />
+          <xs:element name="val_19" type="xs:int" />
+          <xs:element name="val_20" nillable="true" type="xs:int" />
+          <xs:element name="tarjetaDigitada" nillable="true" type="amex:TarjetaDigitadaType" />
+          <xs:element name="tarjetaDeslizada" nillable="true" type="amex:TarjetaDeslizadaType" />
+          <xs:element name="tarjetaChip" nillable="true" type="amex:TarjetaChipType" />
+          <xs:element name="validacionAVS" nillable="true" type="amex:ValidacionAVSType" />
+          <xs:element name="finalStatus" nillable="true" type="xs:string" />
+          <xs:element name="extraData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CancelaPagoAmexRequest" type="amex:CancelPagoType" />
+      <xs:element name="CancelaPagoAmexResponse" type="amex:CancelPagoResponseType" />
+      <xs:element name="echoAmexRequest" type="xs:string" />
+      <xs:element name="echoAmexResponse" type="amex:EchoResponseType" />
+      <xs:element name="insPagoAmexResponse" type="amex:InsPagoAmexResponseType" />
+      <xs:element name="genPagoAmexRequest" type="amex:InsPagoAmexRequestType" />
+      <xs:element name="genPagoAmexResponse" type="amex:GenPagoAmexResponseType" />
+      <xs:element name="invalidatePagoAmexRequest" type="amex:CancelPagoType" />
+      <xs:element name="invalidatePagoAmexResponse" type="amex:InvalidatePagoAmexResponseType" />
+      <xs:complexType name="CancelPagoType">
+        <xs:sequence>
+          <xs:element name="t_servicio" type="xs:string" />
+          <xs:element name="clave_entidad" type="xs:int" />
+          <xs:element name="val_1" type="xs:int" />
+          <xs:element name="c_cur" type="xs:int" />
+          <xs:element name="cd_origen" type="xs:string" />
+          <xs:element name="nu_conpgo" type="xs:int" />
+          <xs:element name="cd_autpgo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CancelPagoResponseType">
+        <xs:sequence>
+          <xs:element name="t_servicio" type="xs:string" />
+          <xs:element name="clave_entidad" type="xs:int" />
+          <xs:element name="val_1" type="xs:int" />
+          <xs:element name="c_cur" type="xs:int" />
+          <xs:element name="codigoRespuesta" type="xs:int" />
+          <xs:element name="mensaje" type="xs:string" />
+          <xs:element name="systemTraceNumber" type="xs:string" />
+          <xs:element name="transactionID" type="xs:string" />
+          <xs:element name="transactionAmount" type="xs:string" />
+          <xs:element name="consecutivoPago" type="xs:string" />
+          <xs:element name="authorizationCode" type="xs:string" />
+          <xs:element name="nombreComercio" type="xs:string" />
+          <xs:element name="direccionComercio" type="xs:string" />
+          <xs:element name="afiliacion" type="xs:string" />
+          <xs:element name="horaTransaccion" type="xs:string" />
+          <xs:element name="vencimiento" type="xs:string" />
+          <xs:element name="monto" type="xs:string" />
+          <xs:element name="titular" type="xs:string" />
+          <xs:element name="tdc" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="InsPagoAmexResponseType">
+        <xs:sequence>
+          <xs:element name="t_servicio" type="xs:string" />
+          <xs:element name="clave_entidad" type="xs:int" />
+          <xs:element name="val_1" type="xs:int" />
+          <xs:element name="c_cur" type="xs:int" />
+          <xs:element name="codigoRespuesta" type="xs:int" />
+          <xs:element name="mensaje" type="xs:string" />
+          <xs:element name="systemTraceNumber" type="xs:string" />
+          <xs:element name="transactionID" type="xs:string" />
+          <xs:element name="transactionAmount" type="xs:string" />
+          <xs:element name="consecutivoPago" type="xs:string" />
+          <xs:element name="authorizationCode" type="xs:string" />
+          <xs:element name="nombreComercio" type="xs:string" />
+          <xs:element name="direccionComercio" type="xs:string" />
+          <xs:element name="afiliacion" type="xs:string" />
+          <xs:element name="horaTransaccion" type="xs:string" />
+          <xs:element name="integratedCircuit" type="xs:string" />
+          <xs:element name="aid" type="xs:string" />
+          <xs:element name="firma" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="EchoResponseType">
+        <xs:sequence>
+          <xs:element name="echo" type="xs:string" />
+          <xs:element name="actionCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TarjetaDigitadaType">
+        <xs:sequence>
+          <xs:element name="operationEnvironment" type="xs:int" />
+          <xs:element name="cardHolderPresent" type="xs:string" />
+          <xs:element name="cardPresent" type="xs:boolean" />
+          <xs:element name="compraRemotaCliente" nillable="true" type="amex:CompraRemotaType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CompraRemotaType">
+        <xs:sequence>
+          <xs:element name="browser" type="xs:string" />
+          <xs:element name="shipping" type="xs:string" />
+          <xs:element name="productId" type="xs:string" />
+          <xs:element name="ipCliente" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TarjetaDeslizadaType">
+        <xs:sequence>
+          <xs:element name="track1" type="xs:string" />
+          <xs:element name="track2" type="xs:string" />
+          <xs:element name="operationEnvironment" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TarjetaChipType">
+        <xs:sequence>
+          <xs:element name="operationEnvironment" type="xs:int" />
+          <xs:element name="applicationCryptogram" type="xs:string" />
+          <xs:element name="issuerApplicationData" type="xs:string" />
+          <xs:element name="unpredictableNumber" type="xs:string" />
+          <xs:element name="applicationTransactionCounter" type="xs:string" />
+          <xs:element name="terminalVerificationResult" type="xs:string" />
+          <xs:element name="transactionDate" type="xs:string" />
+          <xs:element name="transactionType" type="xs:string" />
+          <xs:element name="amountAuthorized" type="xs:string" />
+          <xs:element name="transactionCurrencyCode" type="xs:string" />
+          <xs:element name="terminalCountryCode" type="xs:string" />
+          <xs:element name="applicationInterchangeProfile" type="xs:string" />
+          <xs:element name="amountOther" type="xs:string" />
+          <xs:element name="applicationPANSequence" type="xs:string" />
+          <xs:element name="cryptogramInformationData" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ValidacionAVSType">
+        <xs:sequence>
+          <xs:element name="nombreTitular" type="xs:string" />
+          <xs:element name="apellidosTitular" type="xs:string" />
+          <xs:element name="codigoPostal" type="xs:string" />
+          <xs:element name="direccion" type="xs:string" />
+          <xs:element name="datosEnvio" nillable="true" type="amex:EnvioCompraType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="EnvioCompraType">
+        <xs:sequence>
+          <xs:element name="codigoPostalDestinatario" type="xs:string" />
+          <xs:element name="direccionDestinatario" type="xs:string" />
+          <xs:element name="nombreDestinatario" type="xs:string" />
+          <xs:element name="apellidosDestinatario" type="xs:string" />
+          <xs:element name="telefonoDestinatario" type="xs:string" />
+          <xs:element name="paisDestinatario" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GenPagoAmexResponseType">
+        <xs:sequence>
+          <xs:element name="autorizacion" type="xs:string" />
+          <xs:element name="criptograma" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+          <xs:element name="codigoRespuesta" type="xs:int" />
+          <xs:element name="xmlPagare" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="InvalidatePagoAmexResponseType">
+        <xs:sequence>
+          <xs:element name="t_servicio" type="xs:string" />
+          <xs:element name="clave_entidad" type="xs:int" />
+          <xs:element name="val_1" type="xs:int" />
+          <xs:element name="c_cur" type="xs:int" />
+          <xs:element name="codigoRespuesta" type="xs:int" />
+          <xs:element name="mensaje" type="xs:string" />
+          <xs:element name="systemTraceNumber" type="xs:string" />
+          <xs:element name="transactionID" type="xs:string" />
+          <xs:element name="transactionAmount" type="xs:string" />
+          <xs:element name="consecutivoPago" type="xs:string" />
+          <xs:element name="authorizationCode" type="xs:string" />
+          <xs:element name="nombreComercio" type="xs:string" />
+          <xs:element name="direccionComercio" type="xs:string" />
+          <xs:element name="afiliacion" type="xs:string" />
+          <xs:element name="horaTransaccion" type="xs:string" />
+          <xs:element name="vencimiento" type="xs:string" />
+          <xs:element name="monto" type="xs:string" />
+          <xs:element name="titular" type="xs:string" />
+          <xs:element name="tdc" type="xs:string" />
+          <xs:element name="xmlPagare" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="insPagoAmexResponse">
+    <wsdl:part name="insPagoAmexResponse" element="sch:insPagoAmexResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelaPagoAmexRequest">
+    <wsdl:part name="CancelaPagoAmexRequest" element="sch:CancelaPagoAmexRequest" />
+  </wsdl:message>
+  <wsdl:message name="invalidatePagoAmexResponse">
+    <wsdl:part name="invalidatePagoAmexResponse" element="sch:invalidatePagoAmexResponse" />
+  </wsdl:message>
+  <wsdl:message name="echoAmexResponse">
+    <wsdl:part name="echoAmexResponse" element="sch:echoAmexResponse" />
+  </wsdl:message>
+  <wsdl:message name="genPagoAmexResponse">
+    <wsdl:part name="genPagoAmexResponse" element="sch:genPagoAmexResponse" />
+  </wsdl:message>
+  <wsdl:message name="echoAmexRequest">
+    <wsdl:part name="echoAmexRequest" element="sch:echoAmexRequest" />
+  </wsdl:message>
+  <wsdl:message name="genPagoAmexRequest">
+    <wsdl:part name="genPagoAmexRequest" element="sch:genPagoAmexRequest" />
+  </wsdl:message>
+  <wsdl:message name="insPagoAmexRequest">
+    <wsdl:part name="insPagoAmexRequest" element="sch:insPagoAmexRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelaPagoAmexResponse">
+    <wsdl:part name="CancelaPagoAmexResponse" element="sch:CancelaPagoAmexResponse" />
+  </wsdl:message>
+  <wsdl:message name="invalidatePagoAmexRequest">
+    <wsdl:part name="invalidatePagoAmexRequest" element="sch:invalidatePagoAmexRequest" />
+  </wsdl:message>
+  <wsdl:portType name="AmericanExpress">
+    <wsdl:operation name="insPagoAmex">
+      <wsdl:input name="insPagoAmexRequest" message="tns:insPagoAmexRequest" />
+      <wsdl:output name="insPagoAmexResponse" message="tns:insPagoAmexResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelaPagoAmex">
+      <wsdl:input name="CancelaPagoAmexRequest" message="tns:CancelaPagoAmexRequest" />
+      <wsdl:output name="CancelaPagoAmexResponse" message="tns:CancelaPagoAmexResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="invalidatePagoAmex">
+      <wsdl:input name="invalidatePagoAmexRequest" message="tns:invalidatePagoAmexRequest" />
+      <wsdl:output name="invalidatePagoAmexResponse" message="tns:invalidatePagoAmexResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="echoAmex">
+      <wsdl:input name="echoAmexRequest" message="tns:echoAmexRequest" />
+      <wsdl:output name="echoAmexResponse" message="tns:echoAmexResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="genPagoAmex">
+      <wsdl:input name="genPagoAmexRequest" message="tns:genPagoAmexRequest" />
+      <wsdl:output name="genPagoAmexResponse" message="tns:genPagoAmexResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AmericanExpressSoap11" type="tns:AmericanExpress">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insPagoAmex">
+      <soap:operation soapAction="" />
+      <wsdl:input name="insPagoAmexRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="insPagoAmexResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelaPagoAmex">
+      <soap:operation soapAction="" />
+      <wsdl:input name="CancelaPagoAmexRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CancelaPagoAmexResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="invalidatePagoAmex">
+      <soap:operation soapAction="" />
+      <wsdl:input name="invalidatePagoAmexRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="invalidatePagoAmexResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echoAmex">
+      <soap:operation soapAction="" />
+      <wsdl:input name="echoAmexRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="echoAmexResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genPagoAmex">
+      <soap:operation soapAction="" />
+      <wsdl:input name="genPagoAmexRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="genPagoAmexResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="insPagoAmex">
+    <wsdl:port name="AmericanExpressSoap11" binding="tns:AmericanExpressSoap11">
+      <soap:address location="http://localhost:9080/MultipagosWS/services/insPagoAmex/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://webservice.cifrada.interred.adquira.com.mx" xmlns:impl="http://webservice.cifrada.interred.adquira.com.mx" targetNamespace="http://webservice.cifrada.interred.adquira.com.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://webservice.cifrada.interred.adquira.com.mx">
+      <xsd:element name="procesaCompraOL">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="nu_plataforma" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="fallback" type="xsd:int" />
+            <xsd:element name="puntos" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraOLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaCompraOLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagare">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdAutorizacion" type="xsd:string" />
+            <xsd:element name="referencia" type="xsd:string" />
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="tpoOperacion" type="xsd:string" />
+            <xsd:element name="tag9F26" type="xsd:string" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+            <xsd:element name="cdNivel2" type="xsd:int" />
+            <xsd:element name="tp_servicio" type="xsd:int" />
+            <xsd:element name="secuencia" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getPagareReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareDeclinado">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="serie" type="xsd:string" />
+            <xsd:element name="tarjeta" type="xsd:string" />
+            <xsd:element name="t_importe" type="xsd:float" />
+            <xsd:element name="criptograma" type="xsd:string" />
+            <xsd:element name="titular" type="xsd:string" />
+            <xsd:element name="cdAutorizacion" type="xsd:string" />
+            <xsd:element name="servicio" type="xsd:string" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+            <xsd:element name="cdNivel2" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareDeclinadoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getPagareDeclinadoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareDeclinadoChip">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="tarjeta" type="xsd:string" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="criptograma" type="xsd:string" />
+            <xsd:element name="titular" type="xsd:string" />
+            <xsd:element name="cdAutorizacion" type="xsd:string" />
+            <xsd:element name="servicio" type="xsd:string" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+            <xsd:element name="cdNivel2" type="xsd:int" />
+            <xsd:element name="plazo" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareDeclinadoChipResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getPagareDeclinadoChipReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDescripciones">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="entidad" type="xsd:int" />
+            <xsd:element name="nuAfiliacion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDescripcionesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getDescripcionesReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getInformacion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="entidad" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getInformacionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getInformacionReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="entidad" type="xsd:int" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getDatosReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAfiliaciones">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAfiliacionesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAfiliacionesReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="nu_plataforma" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="cd_autorizacion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cancelacionReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:int" />
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStatusReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacionDigitada">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="cd_autorizacion" type="xsd:string" />
+            <xsd:element name="monto" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacionDigitadaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cancelacionDigitadaReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consulta">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="val_2" type="xsd:int" />
+            <xsd:element name="val_3" type="xsd:int" />
+            <xsd:element name="val_4" type="xsd:int" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_7" type="xsd:string" />
+            <xsd:element name="val_8" type="xsd:string" />
+            <xsd:element name="val_9" type="xsd:string" />
+            <xsd:element name="val_10" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="val_13" type="xsd:string" />
+            <xsd:element name="val_14" type="xsd:string" />
+            <xsd:element name="val_15" type="xsd:string" />
+            <xsd:element name="fallback" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="valida">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="email" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="validaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="validaReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusAlsea">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+            <xsd:element name="cdNivel2" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:int" />
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="tpoTransaccion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusAlseaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStatusAlseaReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="imprimePagare">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdAutorizacion" type="xsd:string" />
+            <xsd:element name="referencia" type="xsd:string" />
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="tpoOperacion" type="xsd:string" />
+            <xsd:element name="tag9F26" type="xsd:string" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+            <xsd:element name="cdNivel2" type="xsd:int" />
+            <xsd:element name="tp_servicio" type="xsd:int" />
+            <xsd:element name="secuencia" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="imprimePagareResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="imprimePagareReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraCE">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="nu_plataforma" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="fallback" type="xsd:int" />
+            <xsd:element name="puntos" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraCEResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaCompraCEReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraCEV">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="nu_plataforma" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="fallback" type="xsd:int" />
+            <xsd:element name="puntos" type="xsd:int" />
+            <xsd:element name="version" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraCEVResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaCompraCEVReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraCE10">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="nu_plataforma" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="fallback" type="xsd:int" />
+            <xsd:element name="puntos" type="xsd:int" />
+            <xsd:element name="version" type="xsd:string" />
+            <xsd:element name="aid" type="xsd:string" />
+            <xsd:element name="applabel" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraCE10Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaCompraCE10Return" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacionCE">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="nu_plataforma" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="cd_autorizacion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacionCEResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cancelacionCEReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacionCEV">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="nu_afiliacion" type="xsd:string" />
+            <xsd:element name="nu_plataforma" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="cd_autorizacion" type="xsd:string" />
+            <xsd:element name="version" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelacionCEVResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cancelacionCEVReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatosFinanciamiento">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDatosFinanciamientoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getDatosFinanciamientoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareDEMV">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="track2" type="xsd:string" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="criptograma" type="xsd:string" />
+            <xsd:element name="titular" type="xsd:string" />
+            <xsd:element name="servicio" type="xsd:string" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+            <xsd:element name="cdNivel2" type="xsd:int" />
+            <xsd:element name="plazo" type="xsd:int" />
+            <xsd:element name="aid" type="xsd:string" />
+            <xsd:element name="label" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareDEMVResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getPagareDEMVReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompra">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="fallback" type="xsd:int" />
+            <xsd:element name="puntos" type="xsd:int" />
+            <xsd:element name="tag50" type="xsd:string" />
+            <xsd:element name="tag4F" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCompraResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaCompraReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCancelacion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="s_transm" type="xsd:string" />
+            <xsd:element name="c_referencia" type="xsd:string" />
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="t_servicio" type="xsd:string" />
+            <xsd:element name="c_cur" type="xsd:int" />
+            <xsd:element name="t_importe" type="xsd:string" />
+            <xsd:element name="tarjetahabiente" type="xsd:string" />
+            <xsd:element name="val_3" type="xsd:string" />
+            <xsd:element name="val_4" type="xsd:string" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="clave_entidad" type="xsd:int" />
+            <xsd:element name="val_16" type="xsd:string" />
+            <xsd:element name="val_17" type="xsd:string" />
+            <xsd:element name="val_18" type="xsd:string" />
+            <xsd:element name="val_19" type="xsd:string" />
+            <xsd:element name="val_20" type="xsd:string" />
+            <xsd:element name="email_admin" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="TAG5F34" type="xsd:string" />
+            <xsd:element name="TAGSEMV" type="xsd:string" />
+            <xsd:element name="sFlag" type="xsd:string" />
+            <xsd:element name="TAG9F26" type="xsd:string" />
+            <xsd:element name="TAG9F27" type="xsd:string" />
+            <xsd:element name="cd_autorizacion" type="xsd:string" />
+            <xsd:element name="aid" type="xsd:string" />
+            <xsd:element name="label" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaCancelacionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaCancelacionReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareSA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdEntidad" type="xsd:int" />
+            <xsd:element name="cdNivel1" type="xsd:int" />
+            <xsd:element name="cdNivel2" type="xsd:int" />
+            <xsd:element name="tp_servicio" type="xsd:int" />
+            <xsd:element name="referencia" type="xsd:string" />
+            <xsd:element name="secuencia" type="xsd:string" />
+            <xsd:element name="tpoOperacion" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+            <xsd:element name="correo" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPagareSAResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getPagareSAReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="enviaRegistros">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xml" type="xsd:string" />
+            <xsd:element name="comercio" type="xsd:string" />
+            <xsd:element name="correo" type="xsd:string" />
+            <xsd:element name="accion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="enviaRegistrosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="enviaRegistrosReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="validaRequest">
+    <wsdl:part name="parameters" element="impl:valida" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionDigitadaRequest">
+    <wsdl:part name="parameters" element="impl:cancelacionDigitada" />
+  </wsdl:message>
+  <wsdl:message name="procesaCancelacionRequest">
+    <wsdl:part name="parameters" element="impl:procesaCancelacion" />
+  </wsdl:message>
+  <wsdl:message name="getDescripcionesResponse">
+    <wsdl:part name="parameters" element="impl:getDescripcionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInformacionResponse">
+    <wsdl:part name="parameters" element="impl:getInformacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="imprimePagareResponse">
+    <wsdl:part name="parameters" element="impl:imprimePagareResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviaRegistrosRequest">
+    <wsdl:part name="parameters" element="impl:enviaRegistros" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionDigitadaResponse">
+    <wsdl:part name="parameters" element="impl:cancelacionDigitadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatosResponse">
+    <wsdl:part name="parameters" element="impl:getDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAfiliacionesRequest">
+    <wsdl:part name="parameters" element="impl:getAfiliaciones" />
+  </wsdl:message>
+  <wsdl:message name="getStatusAlseaResponse">
+    <wsdl:part name="parameters" element="impl:getStatusAlseaResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaResponse">
+    <wsdl:part name="parameters" element="impl:validaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDescripcionesRequest">
+    <wsdl:part name="parameters" element="impl:getDescripciones" />
+  </wsdl:message>
+  <wsdl:message name="getDatosRequest">
+    <wsdl:part name="parameters" element="impl:getDatos" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraRequest">
+    <wsdl:part name="parameters" element="impl:procesaCompra" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionCERequest">
+    <wsdl:part name="parameters" element="impl:cancelacionCE" />
+  </wsdl:message>
+  <wsdl:message name="getPagareDeclinadoChipResponse">
+    <wsdl:part name="parameters" element="impl:getPagareDeclinadoChipResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatosFinanciamientoRequest">
+    <wsdl:part name="parameters" element="impl:getDatosFinanciamiento" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionResponse">
+    <wsdl:part name="parameters" element="impl:cancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionCEVRequest">
+    <wsdl:part name="parameters" element="impl:cancelacionCEV" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraOLRequest">
+    <wsdl:part name="parameters" element="impl:procesaCompraOL" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionCEResponse">
+    <wsdl:part name="parameters" element="impl:cancelacionCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraCEResponse">
+    <wsdl:part name="parameters" element="impl:procesaCompraCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraCEVRequest">
+    <wsdl:part name="parameters" element="impl:procesaCompraCEV" />
+  </wsdl:message>
+  <wsdl:message name="getStatusResponse">
+    <wsdl:part name="parameters" element="impl:getStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAfiliacionesResponse">
+    <wsdl:part name="parameters" element="impl:getAfiliacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviaRegistrosResponse">
+    <wsdl:part name="parameters" element="impl:enviaRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatosFinanciamientoResponse">
+    <wsdl:part name="parameters" element="impl:getDatosFinanciamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPagareDeclinadoResponse">
+    <wsdl:part name="parameters" element="impl:getPagareDeclinadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraCEVResponse">
+    <wsdl:part name="parameters" element="impl:procesaCompraCEVResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraCE10Request">
+    <wsdl:part name="parameters" element="impl:procesaCompraCE10" />
+  </wsdl:message>
+  <wsdl:message name="getPagareSAResponse">
+    <wsdl:part name="parameters" element="impl:getPagareSAResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPagareRequest">
+    <wsdl:part name="parameters" element="impl:getPagare" />
+  </wsdl:message>
+  <wsdl:message name="getPagareSARequest">
+    <wsdl:part name="parameters" element="impl:getPagareSA" />
+  </wsdl:message>
+  <wsdl:message name="getStatusRequest">
+    <wsdl:part name="parameters" element="impl:getStatus" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraOLResponse">
+    <wsdl:part name="parameters" element="impl:procesaCompraOLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPagareDeclinadoRequest">
+    <wsdl:part name="parameters" element="impl:getPagareDeclinado" />
+  </wsdl:message>
+  <wsdl:message name="getInformacionRequest">
+    <wsdl:part name="parameters" element="impl:getInformacion" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraResponse">
+    <wsdl:part name="parameters" element="impl:procesaCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatusAlseaRequest">
+    <wsdl:part name="parameters" element="impl:getStatusAlsea" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionCEVResponse">
+    <wsdl:part name="parameters" element="impl:cancelacionCEVResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPagareResponse">
+    <wsdl:part name="parameters" element="impl:getPagareResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPagareDeclinadoChipRequest">
+    <wsdl:part name="parameters" element="impl:getPagareDeclinadoChip" />
+  </wsdl:message>
+  <wsdl:message name="getPagareDEMVResponse">
+    <wsdl:part name="parameters" element="impl:getPagareDEMVResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaResponse">
+    <wsdl:part name="parameters" element="impl:consultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraCE10Response">
+    <wsdl:part name="parameters" element="impl:procesaCompraCE10Response" />
+  </wsdl:message>
+  <wsdl:message name="consultaRequest">
+    <wsdl:part name="parameters" element="impl:consulta" />
+  </wsdl:message>
+  <wsdl:message name="cancelacionRequest">
+    <wsdl:part name="parameters" element="impl:cancelacion" />
+  </wsdl:message>
+  <wsdl:message name="imprimePagareRequest">
+    <wsdl:part name="parameters" element="impl:imprimePagare" />
+  </wsdl:message>
+  <wsdl:message name="getPagareDEMVRequest">
+    <wsdl:part name="parameters" element="impl:getPagareDEMV" />
+  </wsdl:message>
+  <wsdl:message name="procesaCancelacionResponse">
+    <wsdl:part name="parameters" element="impl:procesaCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaCompraCERequest">
+    <wsdl:part name="parameters" element="impl:procesaCompraCE" />
+  </wsdl:message>
+  <wsdl:portType name="ProcesadorPagosFull">
+    <wsdl:operation name="procesaCompraOL">
+      <wsdl:input name="procesaCompraOLRequest" message="impl:procesaCompraOLRequest" />
+      <wsdl:output name="procesaCompraOLResponse" message="impl:procesaCompraOLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPagare">
+      <wsdl:input name="getPagareRequest" message="impl:getPagareRequest" />
+      <wsdl:output name="getPagareResponse" message="impl:getPagareResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPagareDeclinado">
+      <wsdl:input name="getPagareDeclinadoRequest" message="impl:getPagareDeclinadoRequest" />
+      <wsdl:output name="getPagareDeclinadoResponse" message="impl:getPagareDeclinadoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPagareDeclinadoChip">
+      <wsdl:input name="getPagareDeclinadoChipRequest" message="impl:getPagareDeclinadoChipRequest" />
+      <wsdl:output name="getPagareDeclinadoChipResponse" message="impl:getPagareDeclinadoChipResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDescripciones">
+      <wsdl:input name="getDescripcionesRequest" message="impl:getDescripcionesRequest" />
+      <wsdl:output name="getDescripcionesResponse" message="impl:getDescripcionesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformacion">
+      <wsdl:input name="getInformacionRequest" message="impl:getInformacionRequest" />
+      <wsdl:output name="getInformacionResponse" message="impl:getInformacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatos">
+      <wsdl:input name="getDatosRequest" message="impl:getDatosRequest" />
+      <wsdl:output name="getDatosResponse" message="impl:getDatosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAfiliaciones">
+      <wsdl:input name="getAfiliacionesRequest" message="impl:getAfiliacionesRequest" />
+      <wsdl:output name="getAfiliacionesResponse" message="impl:getAfiliacionesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelacion">
+      <wsdl:input name="cancelacionRequest" message="impl:cancelacionRequest" />
+      <wsdl:output name="cancelacionResponse" message="impl:cancelacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <wsdl:input name="getStatusRequest" message="impl:getStatusRequest" />
+      <wsdl:output name="getStatusResponse" message="impl:getStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelacionDigitada">
+      <wsdl:input name="cancelacionDigitadaRequest" message="impl:cancelacionDigitadaRequest" />
+      <wsdl:output name="cancelacionDigitadaResponse" message="impl:cancelacionDigitadaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <wsdl:input name="consultaRequest" message="impl:consultaRequest" />
+      <wsdl:output name="consultaResponse" message="impl:consultaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="valida">
+      <wsdl:input name="validaRequest" message="impl:validaRequest" />
+      <wsdl:output name="validaResponse" message="impl:validaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatusAlsea">
+      <wsdl:input name="getStatusAlseaRequest" message="impl:getStatusAlseaRequest" />
+      <wsdl:output name="getStatusAlseaResponse" message="impl:getStatusAlseaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="imprimePagare">
+      <wsdl:input name="imprimePagareRequest" message="impl:imprimePagareRequest" />
+      <wsdl:output name="imprimePagareResponse" message="impl:imprimePagareResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompraCE">
+      <wsdl:input name="procesaCompraCERequest" message="impl:procesaCompraCERequest" />
+      <wsdl:output name="procesaCompraCEResponse" message="impl:procesaCompraCEResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompraCEV">
+      <wsdl:input name="procesaCompraCEVRequest" message="impl:procesaCompraCEVRequest" />
+      <wsdl:output name="procesaCompraCEVResponse" message="impl:procesaCompraCEVResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompraCE10">
+      <wsdl:input name="procesaCompraCE10Request" message="impl:procesaCompraCE10Request" />
+      <wsdl:output name="procesaCompraCE10Response" message="impl:procesaCompraCE10Response" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelacionCE">
+      <wsdl:input name="cancelacionCERequest" message="impl:cancelacionCERequest" />
+      <wsdl:output name="cancelacionCEResponse" message="impl:cancelacionCEResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelacionCEV">
+      <wsdl:input name="cancelacionCEVRequest" message="impl:cancelacionCEVRequest" />
+      <wsdl:output name="cancelacionCEVResponse" message="impl:cancelacionCEVResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatosFinanciamiento">
+      <wsdl:input name="getDatosFinanciamientoRequest" message="impl:getDatosFinanciamientoRequest" />
+      <wsdl:output name="getDatosFinanciamientoResponse" message="impl:getDatosFinanciamientoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPagareDEMV">
+      <wsdl:input name="getPagareDEMVRequest" message="impl:getPagareDEMVRequest" />
+      <wsdl:output name="getPagareDEMVResponse" message="impl:getPagareDEMVResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompra">
+      <wsdl:input name="procesaCompraRequest" message="impl:procesaCompraRequest" />
+      <wsdl:output name="procesaCompraResponse" message="impl:procesaCompraResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="procesaCancelacion">
+      <wsdl:input name="procesaCancelacionRequest" message="impl:procesaCancelacionRequest" />
+      <wsdl:output name="procesaCancelacionResponse" message="impl:procesaCancelacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPagareSA">
+      <wsdl:input name="getPagareSARequest" message="impl:getPagareSARequest" />
+      <wsdl:output name="getPagareSAResponse" message="impl:getPagareSAResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="enviaRegistros">
+      <wsdl:input name="enviaRegistrosRequest" message="impl:enviaRegistrosRequest" />
+      <wsdl:output name="enviaRegistrosResponse" message="impl:enviaRegistrosResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcesadorPagosFullSoapBinding" type="impl:ProcesadorPagosFull">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="procesaCompraOL">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaCompraOLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaCompraOLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPagare">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPagareRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPagareResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPagareDeclinado">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPagareDeclinadoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPagareDeclinadoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPagareDeclinadoChip">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPagareDeclinadoChipRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPagareDeclinadoChipResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDescripciones">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDescripcionesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDescripcionesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformacion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getInformacionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getInformacionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatos">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDatosRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDatosResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAfiliaciones">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAfiliacionesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAfiliacionesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelacion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelacionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelacionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getStatusRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getStatusResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelacionDigitada">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelacionDigitadaRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelacionDigitadaResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultaRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="consultaResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valida">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="validaRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validaResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatusAlsea">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getStatusAlseaRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getStatusAlseaResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="imprimePagare">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="imprimePagareRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="imprimePagareResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompraCE">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaCompraCERequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaCompraCEResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompraCEV">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaCompraCEVRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaCompraCEVResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompraCE10">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaCompraCE10Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaCompraCE10Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelacionCE">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelacionCERequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelacionCEResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelacionCEV">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelacionCEVRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelacionCEVResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatosFinanciamiento">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDatosFinanciamientoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDatosFinanciamientoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPagareDEMV">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPagareDEMVRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPagareDEMVResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="procesaCompra">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaCompraRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaCompraResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="procesaCancelacion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaCancelacionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaCancelacionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPagareSA">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPagareSARequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPagareSAResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviaRegistros">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="enviaRegistrosRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="enviaRegistrosResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProcesadorPagosFull">
+    <wsdl:port name="ProcesadorPagosFull" binding="impl:ProcesadorPagosFullSoapBinding">
+      <wsdlsoap:address location="https://localhost:8443/InterredWS/services/ProcesadorPagosFullService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

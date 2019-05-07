@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multipagos2V10", "Multipagos2V10.csproj", "{B8E32F2A-0F1E-4F33-A45F-92940F51E21C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupMP2", "..\SetupMP2\SetupMP2.vdproj", "{B3584ECB-649C-4612-ADD8-0E5F5B195577}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8E32F2A-0F1E-4F33-A45F-92940F51E21C}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E32F2A-0F1E-4F33-A45F-92940F51E21C}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{B8E32F2A-0F1E-4F33-A45F-92940F51E21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E32F2A-0F1E-4F33-A45F-92940F51E21C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3584ECB-649C-4612-ADD8-0E5F5B195577}.Debug|Any CPU.ActiveCfg = Debug
+		{B3584ECB-649C-4612-ADD8-0E5F5B195577}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4EAD417-EF9C-458E-8F73-74402707AC30}
+	EndGlobalSection
+EndGlobal

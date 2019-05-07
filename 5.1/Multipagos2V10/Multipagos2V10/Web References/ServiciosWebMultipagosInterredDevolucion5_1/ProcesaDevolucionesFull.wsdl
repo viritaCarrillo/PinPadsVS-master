@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://webservice.devolucion.cifrada.interred.adquira.com.mx" xmlns:impl="http://webservice.devolucion.cifrada.interred.adquira.com.mx" targetNamespace="http://webservice.devolucion.cifrada.interred.adquira.com.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://webservice.devolucion.cifrada.interred.adquira.com.mx">
+      <xsd:element name="procesaDevolucionOL">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="val_2" type="xsd:int" />
+            <xsd:element name="val_3" type="xsd:int" />
+            <xsd:element name="val_4" type="xsd:int" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_7" type="xsd:string" />
+            <xsd:element name="val_8" type="xsd:string" />
+            <xsd:element name="val_9" type="xsd:string" />
+            <xsd:element name="val_10" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="val_13" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaDevolucionOLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaDevolucionOLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaDevolucionOLCE">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="val_2" type="xsd:int" />
+            <xsd:element name="val_3" type="xsd:int" />
+            <xsd:element name="val_4" type="xsd:int" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_7" type="xsd:string" />
+            <xsd:element name="val_8" type="xsd:string" />
+            <xsd:element name="val_9" type="xsd:string" />
+            <xsd:element name="val_10" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="val_13" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaDevolucionOLCEResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaDevolucionOLCEReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaDevolucion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="val_1" type="xsd:int" />
+            <xsd:element name="val_2" type="xsd:int" />
+            <xsd:element name="val_3" type="xsd:int" />
+            <xsd:element name="val_4" type="xsd:int" />
+            <xsd:element name="val_5" type="xsd:string" />
+            <xsd:element name="val_6" type="xsd:string" />
+            <xsd:element name="val_7" type="xsd:string" />
+            <xsd:element name="val_8" type="xsd:string" />
+            <xsd:element name="val_9" type="xsd:string" />
+            <xsd:element name="val_10" type="xsd:string" />
+            <xsd:element name="val_11" type="xsd:string" />
+            <xsd:element name="val_12" type="xsd:string" />
+            <xsd:element name="val_13" type="xsd:string" />
+            <xsd:element name="val_14" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="procesaDevolucionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="procesaDevolucionReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="procesaDevolucionOLResponse">
+    <wsdl:part name="parameters" element="impl:procesaDevolucionOLResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaDevolucionOLCEResponse">
+    <wsdl:part name="parameters" element="impl:procesaDevolucionOLCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaDevolucionRequest">
+    <wsdl:part name="parameters" element="impl:procesaDevolucion" />
+  </wsdl:message>
+  <wsdl:message name="procesaDevolucionOLRequest">
+    <wsdl:part name="parameters" element="impl:procesaDevolucionOL" />
+  </wsdl:message>
+  <wsdl:message name="procesaDevolucionResponse">
+    <wsdl:part name="parameters" element="impl:procesaDevolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="procesaDevolucionOLCERequest">
+    <wsdl:part name="parameters" element="impl:procesaDevolucionOLCE" />
+  </wsdl:message>
+  <wsdl:portType name="ProcesaDevolucionesFull">
+    <wsdl:operation name="procesaDevolucionOL">
+      <wsdl:input name="procesaDevolucionOLRequest" message="impl:procesaDevolucionOLRequest" />
+      <wsdl:output name="procesaDevolucionOLResponse" message="impl:procesaDevolucionOLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="procesaDevolucionOLCE">
+      <wsdl:input name="procesaDevolucionOLCERequest" message="impl:procesaDevolucionOLCERequest" />
+      <wsdl:output name="procesaDevolucionOLCEResponse" message="impl:procesaDevolucionOLCEResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="procesaDevolucion">
+      <wsdl:input name="procesaDevolucionRequest" message="impl:procesaDevolucionRequest" />
+      <wsdl:output name="procesaDevolucionResponse" message="impl:procesaDevolucionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcesaDevolucionesFullSoapBinding" type="impl:ProcesaDevolucionesFull">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="procesaDevolucionOL">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaDevolucionOLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaDevolucionOLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="procesaDevolucionOLCE">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaDevolucionOLCERequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaDevolucionOLCEResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="procesaDevolucion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="procesaDevolucionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="procesaDevolucionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProcesaDevolucionesFull">
+    <wsdl:port name="ProcesaDevolucionesFull" binding="impl:ProcesaDevolucionesFullSoapBinding">
+      <wsdlsoap:address location="https://localhost:8443/InterredWS/services/ProcesaDevolucionesFull" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

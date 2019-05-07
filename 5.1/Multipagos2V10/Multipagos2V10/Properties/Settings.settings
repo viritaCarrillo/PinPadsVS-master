@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Multipagos2V10.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Multipagos2V10_ServiciosWebMultipagosInterred3_4_ProcesadorPagosFull" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:8443/InterredWS/services/ProcesadorPagosFullService/</Value>
+    </Setting>
+    <Setting Name="Multipagos2V10_ServiciosWebMultipagosInterredDevolucion5_1_ProcesaDevolucionesFull" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:8443/InterredWS/services/ProcesaDevolucionesFull</Value>
+    </Setting>
+    <Setting Name="Multipagos2V10_ServiciosWebMultipagosPuntos5_1_ProcesadorPuntosFull" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:8443/InterredWS/services/ProcesadorPuntosFull</Value>
+    </Setting>
+    <Setting Name="Multipagos2V10_ServicioWebMultipagosAmex_AmericanExpressService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9080/MultipagosWS/services/insPagoAmex/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

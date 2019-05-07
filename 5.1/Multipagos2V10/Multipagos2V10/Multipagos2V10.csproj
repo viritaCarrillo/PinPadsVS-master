@@ -1,0 +1,245 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8E32F2A-0F1E-4F33-A45F-92940F51E21C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Multipagos2V10</RootNamespace>
+    <AssemblyName>Multipagos2V10</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>CppCoreCheckFuncRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConectaWS\WebService.cs" />
+    <Compile Include="Escucha\LeeC12.cs" />
+    <Compile Include="Escucha\LeeC14.cs" />
+    <Compile Include="Escucha\LeeC23.cs" />
+    <Compile Include="Escucha\LeeC25.cs" />
+    <Compile Include="Escucha\LeeC51.cs" />
+    <Compile Include="Escucha\LeeC54.cs" />
+    <Compile Include="Escucha\LeeQ7.cs" />
+    <Compile Include="Escucha\LeeQ8.cs" />
+    <Compile Include="Escucha\LeeZ10.cs" />
+    <Compile Include="Escucha\LeeZ11.cs" />
+    <Compile Include="Exceptions\PinPadException.cs" />
+    <Compile Include="FileProperties\IniFile.cs" />
+    <Compile Include="Impresion\IPagare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impresion\IPagare.Designer.cs">
+      <DependentUpon>IPagare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\IDatosLectura.cs" />
+    <Compile Include="LeeBandaChip.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Serial\Puerto.cs" />
+    <Compile Include="Util\Arreglos.cs" />
+    <Compile Include="Util\Cifrado.cs" />
+    <Compile Include="Util\CodigosRespuesta.cs" />
+    <Compile Include="Util\Comandos.cs" />
+    <Compile Include="Util\Constantes.cs" />
+    <Compile Include="Util\Conversiones.cs" />
+    <Compile Include="Util\Log.cs" />
+    <Compile Include="Util\Parametros.cs" />
+    <Compile Include="VO\Informacion.cs" />
+    <Compile Include="VO\Respuesta.cs" />
+    <Compile Include="VO\Tarjeta.cs" />
+    <Compile Include="Web References\ServiciosWebMultipagosInterred5_1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiciosWebMultipagosInterredDevolucion5_1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiciosWebMultipagosPuntos5_1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServicioWebMultipagosAmex\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://prepro.adquiracloud.mx/InterredWS/services/ProcesaDevolucionesFull%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiciosWebMultipagosInterredDevolucion5_1\</RelPath>
+      <UpdateFromURL>https://prepro.adquiracloud.mx/InterredWS/services/ProcesaDevolucionesFull%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Multipagos2V10_ServiciosWebMultipagosInterredDevolucion5_1_ProcesaDevolucionesFull</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://prepro.adquiracloud.mx/InterredWS/services/ProcesadorPagosFull%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiciosWebMultipagosInterred5_1\</RelPath>
+      <UpdateFromURL>https://prepro.adquiracloud.mx/InterredWS/services/ProcesadorPagosFull%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Multipagos2V10_ServiciosWebMultipagosInterred3_4_ProcesadorPagosFull</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://prepro.adquiracloud.mx/InterredWS/services/ProcesadorPuntosFull%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiciosWebMultipagosPuntos5_1\</RelPath>
+      <UpdateFromURL>https://prepro.adquiracloud.mx/InterredWS/services/ProcesadorPuntosFull%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Multipagos2V10_ServiciosWebMultipagosPuntos5_1_ProcesadorPuntosFull</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://prepro.adquiracloud.mx/AmexWS/services/insPagoAmex.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicioWebMultipagosAmex\</RelPath>
+      <UpdateFromURL>https://prepro.adquiracloud.mx/AmexWS/services/insPagoAmex.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Multipagos2V10_ServicioWebMultipagosAmex_AmericanExpressService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiciosWebMultipagosInterred5_1\ProcesadorPagosFull.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ServiciosWebMultipagosInterred5_1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiciosWebMultipagosInterredDevolucion5_1\ProcesaDevolucionesFull.wsdl" />
+    <None Include="Web References\ServiciosWebMultipagosInterredDevolucion5_1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiciosWebMultipagosPuntos5_1\ProcesadorPuntosFull.wsdl" />
+    <None Include="Web References\ServiciosWebMultipagosPuntos5_1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicioWebMultipagosAmex\CancelPagoResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWebMultipagosAmex\EchoResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWebMultipagosAmex\GenPagoAmexResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWebMultipagosAmex\insPagoAmex.wsdl" />
+    <None Include="Web References\ServicioWebMultipagosAmex\InsPagoAmexResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWebMultipagosAmex\InvalidatePagoAmexResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWebMultipagosAmex\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Impresion\IPagare.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IPagare.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
